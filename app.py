@@ -489,51 +489,219 @@ with col2:
 
 # Conversion formulas and information
 
+# Conversion formulas and information
+
 st.markdown('<div class="category-title"><i class="fas fa-info-circle"></i>Conversion Information</div>', unsafe_allow_html=True)
 
 # Display different information based on selected category
 if selected_category == CATEGORY_LENGTH:
     st.markdown("""
+                
     <div class="custom-markdown1">
     Common Length Conversions:
     <br>
+
     - 1 meter = 100 centimeters
     - 1 meter = 1000 millimeters
     - 1 kilometer = 1000 meters
     - 1 mile = 1.60934 kilometers
     - 1 foot = 12 inches
     - 1 yard = 3 feet
+                
     </div>
     """, unsafe_allow_html=True)
     
     st.markdown("""
+    
     <div class="custom-markdown2">
     Formula:
+                
     To convert from one unit to another, we first convert to the base unit (meter) and then to the target unit.
-    </div>
+    
     """, unsafe_allow_html=True)
     
 elif selected_category == CATEGORY_AREA:
     st.markdown("""
+
     <div class="custom-markdown1">
     Common Area Conversions:
     <br>
+
     - 1 square meter = 10.7639 square feet
+    <br>
     - 1 square kilometer = 0.386102 square miles
+    <br>
     - 1 hectare = 10,000 square meters
+    <br>
     - 1 acre = 4,046.86 square meters
-    </div>
     """, unsafe_allow_html=True)
     
     st.markdown("""
+                
     <div class="custom-markdown2">
     Formula:
+                
     Area conversions involve squared units, so the conversion factors are squared compared to length conversions.
-    </div>
     """, unsafe_allow_html=True)
     
-# Continue with other categories similarly...
+elif selected_category == CATEGORY_VOLUME:
+    st.markdown("""
+
+    <div class="custom-markdown1">
+    Common Volume Conversions:
+    <br>
+                
+    - 1 cubic meter = 1000 liters
+    <br>
+    - 1 liter = 1000 milliliters
+    <br>
+    - 1 gallon (US) = 3.78541 liters
+    <br>
+    - 1 cup (US) = 236.588 milliliters
+    """, unsafe_allow_html=True)
+    
+    st.markdown("""
+                
+    <div class="custom-markdown2">
+    Formula:
+                
+    Volume conversions involve cubed units for cubic measurements, and direct conversion factors for capacity units like liters.
+    """, unsafe_allow_html=True)
+    
+elif selected_category == CATEGORY_MASS:
+    st.markdown("""
+                
+    <div class="custom-markdown1">
+    Common Mass Conversions:
+    <br>
+                
+    - 1 kilogram = 1000 grams
+    - 1 gram = 1000 milligrams
+    - 1 pound = 453.592 grams
+    - 1 ounce = 28.3495 grams
+    """, unsafe_allow_html=True)
+    
+    st.markdown("""
+                
+    <div class="custom-markdown2">
+    Formula:
+                
+    Mass conversions use direct multiplication or division by conversion factors.
+    """, unsafe_allow_html=True)
+    
+elif selected_category == CATEGORY_TEMPERATURE:
+    st.markdown("""
+                
+    <div class="custom-markdown1">
+    Temperature Conversion Formulas
+    <br>
+
+    - Celsius to Fahrenheit: °F = (°C × 9/5) + 32
+    - Fahrenheit to Celsius: °C = (°F - 32) × 5/9
+    - Celsius to Kelvin: K = °C + 273.15
+    - Kelvin to Celsius: °C = K - 273.15
+    - Fahrenheit to Kelvin: K = (°F - 32) × 5/9 + 273.15
+    - Kelvin to Fahrenheit: °F = (K - 273.15) × 9/5 + 32
+    """, unsafe_allow_html=True)
+    
+    st.markdown("""
+                
+    <div class="custom-markdown2">
+    Note:
+    
+    Unlike other unit conversions, temperature conversions use formulas rather than simple multiplication factors.
+    """, unsafe_allow_html=True)
+    
+elif selected_category == CATEGORY_TIME:
+    st.markdown("""
+                
+    <div class="custom-markdown1">
+    Common Time Conversions:
+    <br>
+
+    - 1 minute = 60 seconds
+    - 1 hour = 60 minutes = 3600 seconds
+    - 1 day = 24 hours = 86400 seconds
+    - 1 week = 7 days = 604800 seconds
+    """, unsafe_allow_html=True)
+    
+    st.markdown("""
+                
+    <div class="custom-markdown2">
+    Formula:
+    
+    Time conversions use direct multiplication or division by conversion factors.
+    """, unsafe_allow_html=True)
+    
+elif selected_category == CATEGORY_SPEED:
+    st.markdown("""
+                
+    <div class="custom-markdown1">
+    Common Speed Conversions:
+    <br>
+                
+    - 1 meter per second = 3.6 kilometers per hour
+    - 1 kilometer per hour = 0.621371 miles per hour
+    - 1 knot = 1.852 kilometers per hour
+    - 1 foot per second = 0.3048 meters per second
+    """, unsafe_allow_html=True)
+    
+    st.markdown("""
+                
+    <div class="custom-markdown2">
+    Formula:
+    
+    Speed conversions involve both distance and time unit conversions.
+    """, unsafe_allow_html=True)
+    
+elif selected_category == CATEGORY_BITS_BYTES:
+    st.markdown("""
+                
+    <div class="custom-markdown1">
+    Digital Storage Conversions:
+    <br>
+
+    - 1 byte = 8 bits
+    - 1 kilobyte (KB) = 1000 bytes
+    - 1 megabyte (MB) = 1000 kilobytes
+    - 1 gigabyte (GB) = 1000 megabytes
+    - 1 terabyte (TB) = 1000 gigabytes
+
+    """, unsafe_allow_html=True)
+    
+    st.markdown("""
+
+    <div class="custom-markdown2">
+    Note:
+
+    This converter uses the decimal (SI) system where 1 KB = 1000 bytes.
+    Some systems use the binary system where 1 KiB (kibibyte) = 1024 bytes.
+    """, unsafe_allow_html=True)
+    
+elif selected_category == CATEGORY_WEIGHT:
+    st.markdown("""
+                
+    <div class="custom-markdown1">
+    Common Weight Conversions:
+    <br>
+
+    - 1 kilogram = 1000 grams
+    - 1 gram = 1000 milligrams
+    - 1 pound = 453.592 grams
+    - 1 ounce = 28.3495 grams
+    - 1 stone = 14 pounds = 6.35029 kilograms
+    """, unsafe_allow_html=True)
+    
+    st.markdown("""
+    
+    <div class="custom-markdown2">
+    Formula:
+    <br>
+                
+    Weight conversions use direct multiplication or division by conversion factors.
+    """, unsafe_allow_html=True)
+
+
 
 # Footer with author information
 st.markdown('<div class="footer">Author: Azmat Ali</div>', unsafe_allow_html=True)
-
